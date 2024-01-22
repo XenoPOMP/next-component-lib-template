@@ -54,9 +54,9 @@
     "prettier": "2.8.1",
     "rimraf": "5.0.1",
     "simple-git-hooks": "^2.8.1",
-    "testyts": "^1.5.0",
     "typescript": "5.1.6",
-    "unbuild": "^1.2.1"
+    "unbuild": "^1.2.1",
+    "vitest": "^1.2.1"
   },
   "lint-staged": {
     "*": "eslint --fix"
