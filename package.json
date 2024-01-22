@@ -39,13 +39,15 @@
     "test": "testyts"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "next": ">=13",
     "react": ">=18"
   },
   "devDependencies": {
     "@ririd/eslint-config": "^0.6.0",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "@types/node": "^18.15.11",
+    "@types/node": ">=18",
+    "@types/react": ">=18",
     "bumpp": "^9.1.0",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
