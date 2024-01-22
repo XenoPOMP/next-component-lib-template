@@ -1,16 +1,10 @@
 {
-  "name": "pkg-name",
+  "name": "component-library",
   "type": "module",
   "version": "0.0.0",
   "description": "",
-  "author": "Riri <Daydreamerriri@outlook.com>",
+  "author": "XenoPOMP",
   "license": "MIT",
-  "homepage": "https://github.com/Daydreamer-riri/pkg-name#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Daydreamer-riri/pkg-name.git"
-  },
-  "bugs": "https://github.com/Daydreamer-riri/pkg-name/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
