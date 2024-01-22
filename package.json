@@ -36,7 +36,8 @@
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "testyts"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -45,18 +46,24 @@
   },
   "devDependencies": {
     "@ririd/eslint-config": "^0.6.0",
+    "@testing-library/react": "^14.1.2",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": ">=18",
     "@types/react": ">=18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-istanbul": "^1.2.1",
     "bumpp": "^9.1.0",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
+    "jsdom": "^24.0.0",
     "prettier": "2.8.1",
+    "react-dom": ">=18",
     "rimraf": "5.0.1",
     "simple-git-hooks": "^2.8.1",
-    "testyts": "^1.5.0",
     "typescript": "5.1.6",
-    "unbuild": "^1.2.1"
+    "unbuild": "^1.2.1",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.1"
   },
   "lint-staged": {
     "*": "eslint --fix"
