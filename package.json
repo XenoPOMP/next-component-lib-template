@@ -51,6 +51,7 @@
     "@types/node": ">=18",
     "@types/react": ">=18",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-istanbul": "^1.2.1",
     "bumpp": "^9.1.0",
     "eslint": "^8.45.0",
     "esno": "^0.17.0",
