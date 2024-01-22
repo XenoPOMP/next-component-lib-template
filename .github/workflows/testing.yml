@@ -1,33 +1,37 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Testing with TestyTS
-
+name: 'Testing'
 on:
   push:
+  pull_request:
+
+env:
+  NODE_VERSION: '18.17.x'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+
+    permissions:
+      # Required to check out the code
+      contents: read
+      # Required to put a comment into the pull-request
+      pull-requests: write
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+
+      - name: 'Install Node (${{ env.NODE_VERSION }})'
+        uses: actions/setup-node@v2
         with:
-          node-version: 18.17.0
-      - run: |
+          node-version: '${{ env.NODE_VERSION }}'
+
+      - name: 'Install dependencies'
+        run: |
+          npm i yarn -g
           yarn install --frozen-lockfile
 
-  run-tests:
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+      - name: 'Run coverage'
+        run: yarn coverage
 
-      - name: CI
-        run: |
-          yarn install --frozen-lockfile
-
-      - name: Run tests
-        run: |
-          yarn test
+      - name: 'Report coverage'
+        if: always() # Also generate the report if tests are failing
+        uses: davelosert/vitest-coverage-report-action@v2
