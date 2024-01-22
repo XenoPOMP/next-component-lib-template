@@ -1,3 +1,5 @@
+// You can enable these types if some type issues will proceed.
+
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 
