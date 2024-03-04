@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "next": ">=13",
+    "next": ">=14",
     "react": ">=18"
   },
   "devDependencies": {
@@ -53,10 +53,11 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-istanbul": "^1.2.1",
     "bumpp": "^9.1.0",
-    "eslint": "^8.45.0",
+    "eslint": "^8.57.0",
+    "eslint-config-xeno": "^0.2.0",
     "esno": "^0.17.0",
     "jsdom": "^24.0.0",
-    "prettier": "2.8.1",
+    "prettier": "^3.0.0",
     "react-dom": ">=18",
     "rimraf": "5.0.1",
     "simple-git-hooks": "^2.8.1",
